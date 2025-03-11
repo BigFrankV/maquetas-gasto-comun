@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil - Sistema</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">Sistema de Gastos</div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="gastos.html">Gastos Comunes</a>
+            <a href="multas.html">Multas</a>
+            <a href="perfil.html" class="active">Perfil</a>
+            <a href="login.html" class="login-btn">Iniciar Sesión</a>
+        </div>
+    </nav>
+
+    <main class="perfil-container">
+        <div class="perfil-card">
+            <div class="perfil-header">
+                <h1>Perfil de Usuario</h1>
+                <button class="edit-btn" onclick="toggleEdit()">Editar</button>
+            </div>
+
+            <div class="perfil-info">
+                <div class="info-group">
+                    <label>Nombre Completo</label>
+                    <input type="text" value="Juan Pérez" disabled>
+                </div>
+
+                <div class="info-group">
+                    <label>Departamento</label>
+                    <input type="text" value="301" disabled>
+                </div>
+
+                <div class="info-group">
+                    <label>Email</label>
+                    <input type="email" value="juan.perez@email.com" disabled>
+                </div>
+
+                <div class="info-group">
+                    <label>Teléfono</label>
+                    <input type="tel" value="+56 9 1234 5678" disabled>
+                </div>
+            </div>
+
+            <div class="perfil-stats">
+                <h2>Resumen de Pagos</h2>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <h3>Total Pagado</h3>
+                        <p>$450.000</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Pendiente</h3>
+                        <p>$75.000</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Gastos - Home</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">Sistema de Gastos</div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="gastos.html">Gastos Comunes</a>
+            <a href="multas.html" class="active">Multas</a>
+            <a href="perfil.html">Perfil</a>
+            <a href="login.html" class="login-btn">Iniciar Sesión</a>
+        </div>
+    </nav>
+
+    <main class="home-container">
+        <h1>Bienvenido al Sistema de Gastos Comunes</h1>
+        
+        <section class="summary-section">
+            <h2>Últimos Pagos</h2>
+            <div class="payment-cards">
+                <div class="payment-card">
+                    <h3>Gastos Comunes</h3>
+                    <div class="payment-info">
+                        <span class="date">15/02/2024</span>
+                        <span class="type">Agua</span>
+                        <span class="amount">$25.000</span>
+                        <span class="status paid">Pagado</span>
+                    </div>
+                </div>
+                <div class="payment-card">
+                    <h3>Multas</h3>
+                    <div class="payment-info">
+                        <span class="date">10/02/2024</span>
+                        <span class="type">Estacionamiento</span>
+                        <span class="amount">$50.000</span>
+                        <span class="status pending">Pendiente</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="charts-section">
+            <div class="chart-container">
+                <h3>Distribución de Gastos del Mes</h3>
+                <canvas id="pieChart"></canvas>
+            </div>
+            <div class="chart-container">
+                <h3>Pagos Anuales</h3>
+                <canvas id="barChart"></canvas>
+            </div>
+        </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel Administrativo - Sistema de Gastos</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="admin-styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body class="admin-body">
+    <nav class="admin-sidebar">
+        <div class="sidebar-header">
+            <h2>Panel Admin</h2>
+        </div>
+        <div class="sidebar-menu">
+            <a href="dashboard.html" class="active">
+                <i class="fas fa-tachometer-alt"></i> Dashboard
+            </a>
+            <a href="usuarios.html">
+                <i class="fas fa-users"></i> Usuarios
+            </a>
+            <a href="gastos.html">
+                <i class="fas fa-file-invoice-dollar"></i> Gastos Comunes
+            </a>
+            <a href="multas.html">
+                <i class="fas fa-exclamation-circle"></i> Multas
+            </a>
+            <a href="../index.html" class="logout">
+                <i class="fas fa-sign-out-alt"></i> Cerrar Sesión
+            </a>
+        </div>
+    </nav>
+
+    <main class="admin-main">
+        <div class="admin-header">
+            <h1>Dashboard</h1>
+            <div class="admin-profile">
+                <span>Admin</span>
+                <img src="../img/admin-avatar.png" alt="Admin">
+            </div>
+        </div>
+
+        <div class="dashboard-stats">
+            <div class="stat-card">
+                <i class="fas fa-users"></i>
+                <div class="stat-info">
+                    <h3>Total Residentes</h3>
+                    <p>45</p>
+                </div>
+            </div>
+            <div class="stat-card">
+                <i class="fas fa-money-bill-wave"></i>
+                <div class="stat-info">
+                    <h3>Pagos Pendientes</h3>
+                    <p>$1.250.000</p>
+                </div>
+            </div>
+            <div class="stat-card">
+                <i class="fas fa-check-circle"></i>
+                <div class="stat-info">
+                    <h3>Pagos Realizados</h3>
+                    <p>$3.750.000</p>
+                </div>
+            </div>
+            <div class="stat-card">
+                <i class="fas fa-exclamation-triangle"></i>
+                <div class="stat-info">
+                    <h3>Multas Activas</h3>
+                    <p>12</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="dashboard-charts">
+            <div class="chart-container">
+                <h3>Pagos Mensuales</h3>
+                <canvas id="paymentsChart"></canvas>
+            </div>
+            <div class="chart-container">
+                <h3>Estado de Pagos</h3>
+                <canvas id="statusChart"></canvas>
+            </div>
+        </div>
+
+        <div class="recent-activity">
+            <h3>Actividad Reciente</h3>
+            <div class="activity-list">
+                <div class="activity-item">
+                    <i class="fas fa-user-plus"></i>
+                    <div class="activity-info">
+                        <p>Nuevo residente registrado</p>
+                        <span>Hace 2 horas</span>
+                    </div>
+                </div>
+                <div class="activity-item">
+                    <i class="fas fa-money-bill-wave"></i>
+                    <div class="activity-info">
+                        <p>Pago registrado - Depto 301</p>
+                        <span>Hace 3 horas</span>
+                    </div>
+                </div>
+                <div class="activity-item">
+                    <i class="fas fa-exclamation-circle"></i>
+                    <div class="activity-info">
+                        <p>Nueva multa registrada - Depto 502</p>
+                        <span>Hace 5 horas</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

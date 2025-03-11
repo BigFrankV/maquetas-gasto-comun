@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gastos Comunes - Sistema</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">Sistema de Gastos</div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="gastos.html" class="active">Gastos Comunes</a>
+            <a href="multas.html">Multas</a>
+            <a href="perfil.html">Perfil</a>
+            <a href="login.html" class="login-btn">Iniciar Sesión</a>
+        </div>
+    </nav>
+
+    <main class="gastos-container">
+        <div class="gastos-header">
+            <h1>Gastos Comunes</h1>
+            <div class="filter-section">
+                <select class="filter-select">
+                    <option value="todos">Todos los gastos</option>
+                    <option value="pendiente">Pendientes</option>
+                    <option value="pagado">Pagados</option>
+                </select>
+                <input type="month" class="month-picker" value="2024-02">
+            </div>
+        </div>
+
+        <div class="gastos-summary">
+            <div class="summary-card">
+                <h3>Total Pendiente</h3>
+                <p class="amount">$85.000</p>
+            </div>
+            <div class="summary-card">
+                <h3>Total Pagado</h3>
+                <p class="amount">$150.000</p>
+            </div>
+        </div>
+        <div class="pay-all-container">
+            <a href="pagar-todo.html" class="btn btn-primary btn-lg">Pagar Todo</a>
+        </div>
+        <div class="gastos-grid">
+            <div class="gasto-card">
+                <div class="gasto-icon agua"></div>
+                <div class="gasto-content">
+                    <div class="gasto-header">
+                        <h3>Agua</h3>
+                        <span class="status paid">Pagado</span>
+                    </div>
+                    <div class="gasto-details">
+                        <p><strong>Periodo:</strong> Febrero 2024</p>
+                        <p><strong>Fecha Venc.:</strong> 15/02/2024</p>
+                        <p><strong>Monto:</strong> $25.000</p>
+                    </div>
+                    <div class="gasto-actions">
+                        <button class="btn-detail">Ver Detalle</button>
+                        <button class="btn-download">Descargar</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="gasto-card">
+                <div class="gasto-icon luz"></div>
+                <div class="gasto-content">
+                    <div class="gasto-header">
+                        <h3>Luz</h3>
+                        <span class="status pending">Pendiente</span>
+                    </div>
+                    <div class="gasto-details">
+                        <p><strong>Periodo:</strong> Febrero 2024</p>
+                        <p><strong>Fecha Venc.:</strong> 20/02/2024</p>
+                        <p><strong>Monto:</strong> $35.000</p>
+                    </div>
+                    <div class="gasto-actions">
+                        <button class="btn-pay">Pagar Ahora</button>
+                        <button class="btn-detail">Ver Detalle</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="main.js"></script>
+</body>
+</html>

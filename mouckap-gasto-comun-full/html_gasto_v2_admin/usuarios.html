@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Usuarios - Admin</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="admin-styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body class="admin-body">
+    <nav class="admin-sidebar">
+        <div class="sidebar-header">
+            <h2>Panel Admin</h2>
+        </div>
+        <div class="sidebar-menu">
+            <a href="dashboard.html" class="active">
+                <i class="fas fa-tachometer-alt"></i> Dashboard
+            </a>
+            <a href="usuarios.html">
+                <i class="fas fa-users"></i> Usuarios
+            </a>
+            <a href="gastos.html">
+                <i class="fas fa-file-invoice-dollar"></i> Gastos Comunes
+            </a>
+            <a href="multas.html">
+                <i class="fas fa-exclamation-circle"></i> Multas
+            </a>
+            <a href="../index.html" class="logout">
+                <i class="fas fa-sign-out-alt"></i> Cerrar Sesión
+            </a>
+        </div>
+    </nav>
+    <!-- Mismo sidebar que dashboard.html -->
+
+    <main class="admin-main">
+        <div class="admin-header">
+            <h1>Gestión de Usuarios</h1>
+            <button class="btn-primary" onclick="showModal('userModal')">
+                <i class="fas fa-plus"></i> Nuevo Usuario
+            </button>
+        </div>
+
+        <div class="search-filters">
+            <input type="text" placeholder="Buscar usuario..." class="search-input">
+            <select class="filter-select">
+                <option value="all">Todos los departamentos</option>
+                <option value="torre-a">Torre A</option>
+                <option value="torre-b">Torre B</option>
+            </select>
+        </div>
+
+        <div class="users-table">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Departamento</th>
+                        <th>Email</th>
+                        <th>Estado</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Juan Pérez</td>
+                        <td>301-A</td>
+                        <td>juan@email.com</td>
+                        <td><span class="status active">Activo</span></td>
+                        <td class="actions">
+                            <button onclick="editUser(1)" class="btn-icon">
+                                <i class="fas fa-edit"></i>
+                            </button>
+                            <button onclick="deleteUser(1)" class="btn-icon delete">
+                                <i class="fas fa-trash"></i>
+                            </button>
+                        </td>
+                    </tr>
+                    <!-- Más filas... -->
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Modal para nuevo/editar usuario -->
+        <div id="userModal" class="modal">
+            <div class="modal-content">
+                <h2>Nuevo Usuario</h2>
+                <form id="userForm">
+                    <div class="form-group">
+                        <label>Nombre Completo</label>
+                        <input type="text" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Departamento</label>
+                        <input type="text" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input type="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Contraseña Temporal</label>
+                        <input type="password" required>
+                    </div>
+                    <div class="form-actions">
+                        <button type="button" onclick="closeModal('userModal')" class="btn-secondary">Cancelar</button>
+                        <button type="submit" class="btn-primary">Guardar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

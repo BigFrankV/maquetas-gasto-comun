@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multas - Sistema</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">Sistema de Gastos</div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="gastos.html">Gastos Comunes</a>
+            <a href="multas.html" class="active">Multas</a>
+            <a href="perfil.html">Perfil</a>
+            <a href="login.html" class="login-btn">Iniciar Sesión</a>
+        </div>
+    </nav>
+
+    <main class="multas-container">
+        <h1>Registro de Multas</h1>
+        <div class="pay-all-container">
+            <a href="pagar-multas.html" class="btn btn-primary btn-lg">Pagar Multas</a>
+        </div>
+        
+        <div class="multas-grid">
+            <div class="multa-card">
+                <div class="multa-header">
+                    <h3>Multa: Estacionamiento Indebido</h3>
+                    <span class="fecha">10/02/2024</span>
+                </div>
+                <div class="multa-details">
+                    <p class="descripcion">Vehículo estacionado en área restringida</p>
+                    <p class="monto">Monto: $50.000</p>
+                    <p class="status pending">Estado: Pendiente</p>
+                    <button class="pay-btn" onclick="handlePayment(1, 'multa')">Pagar Multa</button>
+                </div>
+            </div>
+
+            <div class="multa-card">
+                <div class="multa-header">
+                    <h3>Multa: Ruidos Molestos</h3>
+                    <span class="fecha">05/02/2024</span>
+                </div>
+                <div class="multa-details">
+                    <p class="descripcion">Exceso de ruido después de las 23:00</p>
+                    <p class="monto">Monto: $30.000</p>
+                    <p class="status paid">Estado: Pagado</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="main.js"></script>
+</body>
+</html>
